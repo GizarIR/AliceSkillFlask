@@ -25,8 +25,8 @@ def main():
         if req["request"]["original_utterance"].lower() in ["хорошо","отлично"]:
             response["response"]["text"] = "Супер! Я за вас рада!"
         elif req["request"]["original_utterance"].lower() in ["плохо", "скучно"]:
-            response["response"]["text"] = "Жаль, думаю со мной будет лучше!"
-
+            response["response"]["text"] = "Жаль, думаю со мной было бы лучше!"
+    
     return json.dumps(response)
 
 
