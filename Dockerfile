@@ -8,14 +8,15 @@ WORKDIR /app
 RUN pip install --upgrade pip
 
 COPY ./requirements.txt .
+#COPY ./entrypoint.sh .
 
 RUN pip install -r requirements.txt
 
 COPY . .
 
 # Add permissions for the entrypoint file
-RUN chmod +x "./entrypoint.sh"
+RUN chmod +x entrypoint.sh
 
-CMD ["chmod", "+x", "./entrypoint.sh"]
+#CMD ["chmod", "+x", "./entrypoint.sh"]
 
 ENTRYPOINT ["/app/entrypoint.sh"]
