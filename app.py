@@ -7,8 +7,8 @@ app = Flask(__name__)
 logging.basicConfig(level=logging.DEBUG)
 
 @app.route("/", methods=["POST"])
-def main():
-    logging.info(request.json)
+def handler():
+    logging.info("Входящий запрос:" + request.json)
 
     response = {
         "version": request.json["version"],
