@@ -12,3 +12,7 @@ build/
 *.egg-info/
 .DS_STORE
 .env
+.crt
+.key
+/nginx/certs/*.crt
+/nginx/certs/*.key
